@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bayon&family=Big+Shoulders+Display:wght@100..900&family=Chango&family=DM+Serif+Display:ital@0;1&family=Fira+Code:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Martian+Mono:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--dark-navy: rgba(26, 42, 51, 1);
+	--semi-dark-navi: rgba(31, 54, 65, 1);
+	--silver: rgba(168, 191, 201, 1);
+	--silver-hover: rgba(219, 232, 237, 1);
+	--light-blue: rgba(49, 195, 189, 1);
+	--light-blue-hover: rgba(101, 233, 228, 1);
+	--light-yellow: rgba(242, 177, 55, 1);
+	--light-yellow-hover: rgba(255, 200, 96, 1);
+}
+
+body {
+	background-color: var(--dark-navy);
+	font-family: "Outfit", serif;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+}
+
+header {
+	width: 100%;
+	display: flex;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 12px;
+}
+
+.turn-di {
+	display: flex;
+	padding: 10px;
+	width: 30%;
+	align-items: center;
+	gap: 10px;
+	border-radius: 5px;
+	color: var(--silver);
+	font-size: 18px;
+	justify-content: center;
+	font-weight: 600;
+	flex-direction: row;
+	background-color: var(--semi-dark-navi);
+	box-shadow: 0px -4px 0px 0px rgba(16, 33, 42, 1) inset;
+}
+.turn-di img {
+	width: 10px;
+}
+
+.restart {
+	background-color: var(--silver);
+	box-shadow: 0px -4px 0px 0px rgba(107, 137, 151, 1) inset;
+	padding: 13px;
+	border-radius: 5px;
+}
+main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.area-game {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 25vw);
+	grid-template-rows: repeat(3, 25vw);
+	grid-gap: 20px;
+}
+
+.grid-case {
+	border-radius: 10px;
+	box-shadow: 0px -8px 0px 0px rgba(16, 33, 42, 1) inset;
+	background-color: rgba(31, 54, 65, 1);
+	border: none;
+}
+.grid-case img {
+	width: 40px;
+}
+
+.tab-score {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.score-tab {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	width: 30%;
+	align-items: center;
+	border-radius: 10px;
+	color: var(--dark-navy);
+}
+.first {
+	background-color: var(--light-blue);
+}
+.second {
+	background-color: var(--silver);
+}
+.third {
+	background-color: var(--light-yellow);
+}
+
+.gras-span {
+	font-size: 20px;
+	font-weight: 700;
+}
+.little-span {
+	font-weight: 400;
+	font-size: 14px;
+}
