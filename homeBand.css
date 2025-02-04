@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bayon&family=Big+Shoulders+Display:wght@100..900&family=Chango&family=DM+Serif+Display:ital@0;1&family=Fira+Code:wght@300..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jua&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Martian+Mono:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--dark-navy: rgba(26, 42, 51, 1);
+	--semi-dark-navi: rgba(31, 54, 65, 1);
+	--silver: rgba(168, 191, 201, 1);
+	--silver-hover: rgba(219, 232, 237, 1);
+	--light-blue: rgba(49, 195, 189, 1);
+	--light-blue-hover: rgba(101, 233, 228, 1);
+	--light-yellow: rgba(242, 177, 55, 1);
+	--light-yellow-hover: rgba(255, 200, 96, 1);
+}
+
+
+.first-banderole{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+
+.first-banderole span {
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 700;
+}
+.second-banderole {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+
+.img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.img-text p{
+    color: var(--light-yellow);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.btn-band button{
+    padding: 17px;
+}
+
+.btn-band .silver {
+    width: 100px;
+    border: none;
+    background-color:var(--silver);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.btn-band .orange{
+    width: 200px;
+    border: none;
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.orange:hover{
+    background-color: var(--light-yellow-hover);
+}
+.silver:hover{
+    background-color: var(--silver-hover);
+}
+
+/* new banderole */
+
+.second-banderole span {
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 700;
+}
+.second-banderole .img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.second-banderole .img-text p{
+    color: var(--light-blue);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.second-banderole .btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.second-banderole .btn-band button{
+    padding: 17px;
+}
+
+/* new again */
+
+.third-banderole{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+.third-banderole span {
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.third-banderole .img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.third-banderole .img-text p{
+    color: var(--silver);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.third-banderole .btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.third-banderole .btn-band button{
+    padding: 17px;
+}
+
+.third-banderole .btn-band .silver {
+    width: 200px;
+    border: none;
+    background-color:var(--silver);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.third-banderole .btn-band .orange{
+    width: 200px;
+    border: none;
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+/* 4 new again again */
+
+.four-banderole{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+.four-banderole span {
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.four-banderole .img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.four-banderole .img-text p{
+    color: var(--light-yellow);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.four-banderole .btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.four-banderole .btn-band button{
+    padding: 17px;
+}
+
+.four-banderole .btn-band .silver {
+    width: 100px;
+    border: none;
+    background-color:var(--silver);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.four-banderole .btn-band .orange{
+    width: 200px;
+    border: none;
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+/* 5 new again again */
+
+.five-banderole{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+.five-banderole span {
+    color: var(--silver);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.five-banderole .img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.five-banderole .img-text p{
+    color: var(--light-blue);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.five-banderole .btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.five-banderole .btn-band button{
+    padding: 17px;
+}
+
+.five-banderole .btn-band .silver {
+    width: 100px;
+    border: none;
+    background-color:var(--silver);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.five-banderole .btn-band .orange{
+    width: 200px;
+    border: none;
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+/* 6 new again again */
+
+.six-banderole{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semi-dark-navi);
+    top: 275px;
+    height: 30%;
+    gap: 30px;
+	font-family: "Outfit", serif;
+}
+
+.six-banderole .img-text{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+.six-banderole .img-text p{
+    color: var(--silver);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.six-banderole .btn-band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.six-banderole .btn-band button{
+    padding: 17px;
+}
+
+.six-banderole .btn-band .silver {
+    width: 100px;
+    border: none;
+    background-color:var(--silver);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.six-banderole .btn-band .orange{
+    width: 200px;
+    border: none;
+    background-color: var(--light-yellow);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    color: #1A2A33;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width:768px) {
+    .img-text img {
+        width: 40px;
+    }
+}
+
+.first-banderole{
+    display: none;
+}
+
+.second-banderole{
+    display: none;
+}
+.third-banderole{
+    display: none;
+}
+.four-banderole{
+    display: none;
+}
+.five-banderole{
+    display: none;
+}
+.six-banderole{
+    display: none;
+}

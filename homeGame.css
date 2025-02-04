@@ -75,11 +75,16 @@ main {
 	flex-direction: column;
 	gap: 30px;
 }
+.full{
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(3, 25vw);
-	grid-template-rows: repeat(3, 25vw);
+	grid-template-columns: repeat(3, 28vw);
+	grid-template-rows: repeat(3, 28vw);
 	grid-gap: 20px;
 }
 
@@ -102,7 +107,7 @@ main {
 .score-tab {
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
+	padding: 20px;
 	width: 30%;
 	align-items: center;
 	border-radius: 10px;
@@ -125,4 +130,57 @@ main {
 .little-span {
 	font-weight: 400;
 	font-size: 14px;
+}
+
+@media screen and (min-width:768px) {
+	body{
+		display: flex;
+		flex-direction: column;
+	justify-content: center;
+align-items: center;
+height:100vh ;
+	}
+	.turn-di{
+		width: 20%;
+	}
+	.grid{
+		width: 50%;
+		display: grid;
+		grid-template-columns: repeat(3, 18vw);
+		grid-template-rows: repeat(3, 18vw);
+	}
+	.full{
+		gap: 10px;
+	}
+
+}
+
+@media screen and (min-width:1440px) {
+	.full{
+		width: 50%;
+	}
+
+	.grid{
+		width: 50%;
+		display: grid;
+		grid-template-columns: repeat(3, 10vw);
+		grid-template-rows: repeat(3, 10vw);
+	}
+	nav{
+		width: 70%;
+	}
+	header{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.full{
+		gap: 10px;
+	}
+	.tab-score .score-tab{
+		padding: 10px;
+	}
+}
+button {
+	cursor: pointer;
 }
