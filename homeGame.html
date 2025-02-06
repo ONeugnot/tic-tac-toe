@@ -3,62 +3,58 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="homeBand.css" />
+		<link rel="stylesheet" href="homeBand.css">
 		<link rel="stylesheet" type="text/css" href="./homeGame.css" />
 		<title>Document</title>
 	</head>
 	<body>
 		<div class="full">
-			<header>
-				<nav>
-					<div class="nav-img">
-						<img src="./assets/croix-color-blue.svg" alt="croix-blue" />
-						<img src="./assets/oval-orange.svg" alt="oval-orange" />
+		<header>
+			<nav>
+				<div class="nav-img">
+					<img src="./assets/croix-color-blue.svg" alt="croix-blue" />
+					<img src="./assets/oval-orange.svg" alt="oval-orange" />
+				</div>
+				<div class="turn-di">
+					<img src="./assets/croix-silver.svg" alt="croix-silver" />
+					<span>TURN</span>
+				</div>
+				<div class="restart">
+					<img src="./assets/restar-icon.svg" alt="restart-icon" />
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="area-game">
+				<div class="grid">
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+					<button class="grid-case"></button>
+				</div>
+				<div class="tab-score">
+					<div class="first score-tab">
+						<span class="little-span">X (YOU)</span>
+						<span class="gras-span">14</span>
 					</div>
-					<div class="turn-di">
-						<img
-							id="img-turn"
-							src="./assets/croix-silver.svg"
-							alt="croix-silver"
-						/>
-						<span>TURN</span>
+					<div class="second score-tab">
+						<span class="little-span">TIES</span>
+						<span class="gras-span">32</span>
 					</div>
-					<div class="restart">
-						<img src="./assets/restar-icon.svg" alt="restart-icon" />
+					<div class="third score-tab">
+						<span class="little-span">O (CPU)</span>
+						<span class="gras-span">32</span>
 					</div>
-				</nav>
-			</header>
-			<main>
-				<section class="area-game">
-					<div class="grid">
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-						<button class="grid-case"></button>
-					</div>
-					<div class="tab-score">
-						<div class="first score-tab">
-							<span class="little-span">X (YOU)</span>
-							<span class="gras-span">14</span>
-						</div>
-						<div class="second score-tab">
-							<span class="little-span">TIES</span>
-							<span class="gras-span">32</span>
-						</div>
-						<div class="third score-tab">
-							<span class="little-span">O (CPU)</span>
-							<span class="gras-span">32</span>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
-		<!-- <div class="first-banderole">
+				</div>
+			</section>
+		</main>
+	</div>
+	<!-- <!-- <div class="first-banderole">
 		<span>OH NO, YOU LOST...</span>
 		<div class="img-text">
 			<img src="./assets/oval-orange.svg" alt="oval-orange">
@@ -69,7 +65,7 @@
 			<button class="orange">NEXT ROUND	</button>
 		</div>
 	</div> -->
-		<!-- <div class="second-banderole">
+	<!-- <div class="second-banderole">
 		<span>YOU WON!</span>
 		<div class="img-text">
 			<img src="./assets/croix-color-blue.svg" alt="oval-orange">
@@ -80,7 +76,7 @@
 			<button class="orange">NEXT ROUND	</button>
 		</div>
 	</div> -->
-		<!-- <div class="third-banderole">
+	<!-- <div class="third-banderole">
 
 		<div class="img-text">
 			<p>RESTART GAME?</p>
@@ -90,7 +86,7 @@
 			<button class="orange">YES, RESTART</button>
 		</div>
 	</div> -->
-		<!-- <div class="four-banderole">
+	<!-- <div class="four-banderole">
 		<span>PLAYER 1 WIN!</span>
 		<div class="img-text">
 			<img src="./assets/oval-orange.svg" alt="oval-orange">
@@ -101,7 +97,7 @@
 			<button class="orange">NEXT ROUND	</button>
 		</div>
 	</div> -->
-		<!-- <div class="five-banderole">
+	<!-- <div class="five-banderole">
 		<span>PLAYER 2 WIN!</span>
 		<div class="img-text">
 			<img src="./assets/croix-color-blue.svg" alt="croix-blue">
@@ -112,7 +108,7 @@
 			<button class="orange">NEXT ROUND	</button>
 		</div>
 	</div> -->
-		<!-- <div class="six-banderole">
+	<!-- <div class="six-banderole">
 
 		<div class="img-text">
 
@@ -123,38 +119,6 @@
 			<button class="orange">NEXT ROUND	</button>
 		</div>
 	</div> -->
-		<div class="startgame">
-			<main>
-				<div class="img-head">
-					<img src="./assets/croix-color-blue.svg" alt="croix" />
-					<img src="./assets/oval-orange.svg" alt="rond" />
-				</div>
-				<div class="btn-choose">
-					<span class="tilte">PICK PLAYER 1'S MARK</span>
-					<div class="btn-div">
-						<button class="croix-btn">
-							<img
-								id="croixChangeContent"
-								src="./assets/croix-silver.svg"
-								alt="croix-selector"
-							/>
-						</button>
-						<button class="rond-btn">
-							<img
-								id="ovalContent"
-								src="./assets/oval-silver.svg"
-								alt="rond-selector"
-							/>
-						</button>
-					</div>
-					<span class="tilte-two">REMEMBER : X GOES FIRST</span>
-				</div>
-				<div class="footer">
-					<a href="#"><button class="yellow-btn">NEW GAME (VS CPU)</button></a>
-					<a href="#"><button class="blue-btn">NEW GAME (VS PLAYER)</button></a>
-				</div>
-			</main>
-		</div>
-		<script src="./script.js"></script>
-	</body>
+	<script src="./script.js"></script>
+</body>
 </html>
