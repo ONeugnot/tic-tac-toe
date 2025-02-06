@@ -18,10 +18,35 @@
 	--light-yellow-hover: rgba(255, 200, 96, 1);
 }
 
+.first-banderole{
+    display: none;
+    z-index: 2;
+}
+
+.second-banderole{
+    z-index: 2;
+    display: none;
+}
+.third-banderole{
+    z-index: 2;
+    display: none;
+}
+.four-banderole{
+    z-index: 2;
+    display: none;
+}
+.five-banderole{
+    z-index: 2;
+    display: none;
+}
+.six-banderole{
+    z-index: 2;
+    display: none;
+}
+
 
 .first-banderole{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -40,7 +65,6 @@
 }
 .second-banderole {
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -142,7 +166,6 @@
 
 .third-banderole{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -211,13 +234,13 @@
 
 .four-banderole{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
     background-color: var(--semi-dark-navi);
-    top: 275px;
+    top: 35%;
+    left: 0;
     height: 30%;
     gap: 30px;
 	font-family: "Outfit", serif;
@@ -280,7 +303,6 @@
 
 .five-banderole{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -349,7 +371,6 @@
 
 .six-banderole{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
@@ -416,22 +437,3 @@
     }
 }
 
-.first-banderole{
-    display: none;
-}
-
-.second-banderole{
-    display: none;
-}
-.third-banderole{
-    display: none;
-}
-.four-banderole{
-    display: none;
-}
-.five-banderole{
-    display: none;
-}
-.six-banderole{
-    display: none;
-}

@@ -1,26 +1,120 @@
-const Player1 = document.querySelector(".croix-btn")
+ const opacity = document.querySelector(".opacity")
+ const player2 = document.querySelector(".five-banderole")
+ const player1 = document.querySelector(".four-banderole")
+ const nullPlayer = document.querySelector(".six-banderole")
+ const silverreturn = document.querySelector(".quit")
+ const orangecontinue = document.querySelector(".cont")
+// let savechoose = ""
 
-
-const BtnApi = document.querySelector(".yellow-btn")
-document.addEventListener("click", () => {
-    const croixBtn = document.querySelector(".croix-btn");
-    const rondBtn = document.querySelector(".rond-btn");
-    const croixImg = croixBtn.querySelector("img");
-    const rondImg = rondBtn.querySelector("img");
-
-    croixBtn.addEventListener("click", () => {
-        croixBtn.style.backgroundColor = "#F2B137";
-        rondBtn.style.backgroundColor = "transparent";
-        croixImg.src = "./assets/croix-silver.svg"; 
-        rondImg.src = "./assets/oval-plein.svg"; 
-        rondImg.style.width = "28px"
-    });
-
-    rondBtn.addEventListener("click", () => {
-        rondBtn.style.backgroundColor = "#A8BFC9";
-        croixBtn.style.backgroundColor = "transparent";
-        rondImg.src = "./assets/oval-silver.svg";
-        croixImg.src = "./assets/croix-silver.svg"; 
-    });
+const btnDisable = document.querySelector(".yellow-btn");
+const btnDisable1 = document.querySelector(".blue-btn");
+const start = document.querySelector(".start-choose");
+const btnCroix = document.querySelector(".croix-btn");
+const btnRond = document.querySelector(".rond-btn");
+const imgcroix = document.querySelector(".imgjsp");
+const imgRond = document.querySelector(".imgjsp2");
+btnDisable.addEventListener("click", () => {
+	start.remove();
+});
+btnDisable1.addEventListener("click", () => {
+	start.remove();
 });
 
+
+btnCroix.addEventListener("click", () => {
+	btnCroix.style.background = "#a8bfc9";
+	btnRond.style.background = "transparent";
+	imgcroix.src = "./assets/croix-silver-copy.svg";
+	imgRond.src = "./assets/oval-silver-copy.svg";
+	savechoose = "./assets/croix-color-blue.svg";
+	console.log(savechoose);
+});
+
+btnRond.addEventListener("click", () => {
+	btnRond.style.background = "#a8bfc9";
+	btnCroix.style.background = "transparent";
+	imgcroix.src = "./assets/croix-silver.svg";
+	imgRond.src = "./assets/ronddeux.svg";
+	savechoose = "./assets/oval-orange.svg";
+	console.log(savechoose);
+});
+
+
+
+let PlayerTurn = 0;
+const grid = document.querySelectorAll(".grid-case")
+let tablGame = ["", "", "", "", "", "", "", "", ""];
+const winningCombinations = [
+	[0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[2, 4, 6],
+];
+const spanX = document.querySelector("spanX")
+
+function checkWinner(player) {
+	for (let combination of winningCombinations) {
+		if (tablGame[combination[0]] === player && 
+			tablGame[combination[1]] === player && 
+			tablGame[combination[2]] === player) {
+			return true; 
+		}
+	}
+	return false;
+}
+
+
+for (let i = 0; i < grid.length; i++) {
+	const gridObject = grid[i];
+	
+    gridObject.addEventListener("click", () => {
+		const img = gridObject.firstElementChild;
+
+		if (img.alt) return;
+		
+		if (PlayerTurn % 2 == 0) {
+			if (img.src && img.alt == "") {
+				img.src = "./assets/croix-color-blue.svg"
+				img.alt = "X"
+			}
+		}else {
+			if (img.src && img.alt == "") {
+				img.src = "./assets/oval-orange.svg"
+				img.alt = "O"
+		}
+	}
+		tablGame[i] = img.alt;
+
+		if (checkWinner(img.alt)) {
+			if (img.alt == "O") {
+				opacity.style.display = "block"
+				player1.style.display = "flex"
+				
+			}else{
+				opacity.style.display = "block"
+				player2.style.display = "flex"
+				
+			}
+		}
+		if (!tablGame.includes("")) {
+			nullPlayer.style.display =  "flex"
+		}
+	PlayerTurn++;
+	console.log(tablGame);
+    });
+}
+orangecontinue.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+    nullPlayer.style.display = "none";
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
