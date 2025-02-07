@@ -19,6 +19,7 @@ const btnRond = document.querySelector(".rond-btn");
 const imgcroix = document.querySelector(".imgjsp");
 const imgRond = document.querySelector(".imgjsp2");
 const restart = document.querySelector(".restart")
+
 btnDisable.addEventListener("click", () => {
 	start.remove();
 });
@@ -72,11 +73,14 @@ function checkWinner(player) {
 	}
 	return false;
 }
+	let compteur = 0
+	let compteur1 = 0
+	let compteur2 = 0
 
-
+	
 for (let i = 0; i < grid.length; i++) {
 	const gridObject = grid[i];
-	
+
     gridObject.addEventListener("click", () => {
 		const img = gridObject.firstElementChild;
 
@@ -91,23 +95,33 @@ for (let i = 0; i < grid.length; i++) {
 			if (img.src && img.alt == "") {
 				img.src = "./assets/oval-orange.svg"
 				img.alt = "O"
+
 		}
 	}
 		tablGame[i] = img.alt;
+
+
 
 		if (checkWinner(img.alt)) {
 			if (img.alt == "O") {
 				opacity.style.display = "block"
 				player1.style.display = "flex"
+				compteur1 += 1;
+				document.getElementById("opoint").textContent = compteur1;
 				
 			}else{
 				opacity.style.display = "block"
 				player2.style.display = "flex"
-				
+				compteur += 1;
+				document.getElementById("xpoint").textContent = compteur;
 			}
+
 		}
+
 		if (!tablGame.includes("")) {
 			nullPlayer.style.display =  "flex"
+			compteur2 += 1;
+			document.getElementById("nopoint").textContent = compteur2;
 		}
 	PlayerTurn++;
 	console.log(tablGame);
@@ -163,6 +177,12 @@ silverreturn.addEventListener("click", () => {
     player2.style.display = "none";
     nullPlayer.style.display = "none";
 	body.appendChild(start)
+	compteur = 0
+	compteur1 = 0
+	compteur2 = 0
+	document.getElementById("xpoint").textContent = 0
+	document.getElementById("opoint").textContent = 0;
+	document.getElementById("nopoint").textContent = 0;
 	opacity.style.display  = "none"
     tablGame = ["", "", "", "", "", "", "", "", ""];
 });
@@ -176,6 +196,12 @@ silverreturn1.addEventListener("click", () => {
     player2.style.display = "none";
     nullPlayer.style.display = "none";
 	body.appendChild(start)
+	compteur = 0
+	compteur1 = 0
+	compteur2 = 0
+	document.getElementById("xpoint").textContent = 0
+	document.getElementById("opoint").textContent = 0;
+	document.getElementById("nopoint").textContent = 0;
 	opacity.style.display  = "none"
     tablGame = ["", "", "", "", "", "", "", "", ""];
 });
@@ -189,6 +215,12 @@ silverreturn2.addEventListener("click", () => {
     player2.style.display = "none";
     nullPlayer.style.display = "none";
 	body.appendChild(start)
+	compteur = 0
+	compteur1 = 0
+	compteur2 = 0
+	document.getElementById("xpoint").textContent = 0
+	document.getElementById("opoint").textContent = 0;
+	document.getElementById("nopoint").textContent = 0;
 	opacity.style.display  = "none"
     tablGame = ["", "", "", "", "", "", "", "", ""];
 });
@@ -199,5 +231,11 @@ restart.addEventListener("click", () => {
         grid[i].firstElementChild.src = "";
         grid[i].firstElementChild.alt = "";
 		tablGame = ["", "", "", "", "", "", "", "", ""];
+		compteur = 0
+		compteur1 = 0
+		compteur2 = 0
+		document.getElementById("xpoint").textContent = 0
+		document.getElementById("opoint").textContent = 0;
+		document.getElementById("nopoint").textContent = 0;
     }
 })
