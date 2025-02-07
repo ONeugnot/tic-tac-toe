@@ -1,9 +1,14 @@
+ let body = document.body;
  const opacity = document.querySelector(".opacity")
  const player2 = document.querySelector(".five-banderole")
  const player1 = document.querySelector(".four-banderole")
  const nullPlayer = document.querySelector(".six-banderole")
- const silverreturn = document.querySelector(".quit")
- const orangecontinue = document.querySelector(".cont")
+ const silverreturn = document.getElementById("silver-btn")
+ const silverreturn1 = document.getElementById("silver-btn1")
+ const silverreturn2 = document.getElementById("silver-btn2")
+ const orangecontinue = document.getElementById("orange-btn")
+ const orangecontinue1 = document.getElementById("orange-btn1")
+ const orangecontinue2 = document.getElementById("orange-btn2")
 // let savechoose = ""
 
 const btnDisable = document.querySelector(".yellow-btn");
@@ -13,6 +18,7 @@ const btnCroix = document.querySelector(".croix-btn");
 const btnRond = document.querySelector(".rond-btn");
 const imgcroix = document.querySelector(".imgjsp");
 const imgRond = document.querySelector(".imgjsp2");
+const restart = document.querySelector(".restart")
 btnDisable.addEventListener("click", () => {
 	start.remove();
 });
@@ -111,10 +117,87 @@ orangecontinue.addEventListener("click", () => {
     PlayerTurn = 0;
     for (let i = 0; i < grid.length; i++) {
         grid[i].firstElementChild.src = "";
-        grid[i].firstElementChild.alt = "";
+        grid[i].firstElementChild.alt = "";3
     }
     player1.style.display = "none";
     player2.style.display = "none";
     nullPlayer.style.display = "none";
+		opacity.style.display  = "none"
     tablGame = ["", "", "", "", "", "", "", "", ""];
 });
+orangecontinue1.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";3
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+		opacity.style.display  = "none"
+    nullPlayer.style.display = "none";
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
+orangecontinue2.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";3
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+    nullPlayer.style.display = "none";
+	opacity.style.display  = "none"
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
+
+// BTN QUIT 
+
+
+silverreturn.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";3
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+    nullPlayer.style.display = "none";
+	body.appendChild(start)
+	opacity.style.display  = "none"
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
+silverreturn1.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";3
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+    nullPlayer.style.display = "none";
+	body.appendChild(start)
+	opacity.style.display  = "none"
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
+silverreturn2.addEventListener("click", () => {
+    PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";3
+    }
+    player1.style.display = "none";
+    player2.style.display = "none";
+    nullPlayer.style.display = "none";
+	body.appendChild(start)
+	opacity.style.display  = "none"
+    tablGame = ["", "", "", "", "", "", "", "", ""];
+});
+
+restart.addEventListener("click", () => {
+	PlayerTurn = 0;
+    for (let i = 0; i < grid.length; i++) {
+        grid[i].firstElementChild.src = "";
+        grid[i].firstElementChild.alt = "";
+		tablGame = ["", "", "", "", "", "", "", "", ""];
+    }
+})
